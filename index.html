@@ -1,0 +1,42 @@
+<title>SHITTIEST</title>
+<link rel="stylesheet" href="style.css">
+
+
+<section id="shit1">
+  <h4>调整音量：</h4>
+  <select v-model="express[0]">
+    <option v-for="num in 10" :value="num-1">{{num-1}}</option>
+  </select>
+  <select v-model="express[1]">
+    <option v-for="symbol in '+-*/'" :value="symbol">{{symbol}}</option>
+  </select>
+  <select v-model="express[2]">
+    <option v-for="num in 10" :value="num-1">{{num-1}}</option>
+  </select>
+  <select v-model="express[3]">
+    <option v-for="symbol in '+-*/'" :value="symbol">{{symbol}}</option>
+  </select>
+  <select v-model="express[4]">
+    <option v-for="num in 10" :value="num-1">{{num-1}}</option>
+  </select>
+  <select v-model="express[5]">
+    <option v-for="symbol in '+-*/'" :value="symbol">{{symbol}}</option>
+  </select>
+  <select v-model="express[6]">
+    <option v-for="num in 10" :value="num-1">{{num-1}}</option>
+  </select>
+  =
+  <img src="./lib/volume.png" width="40" />{{volume}}
+  <meter :value="volume" min="0" max="100" />
+</section>
+<hr/>
+<section id="shit2">
+  <h4>输入你的手机号码：</h4>
+  <input type="range" min="10000000000" max="19999999999" v-model="volume" /> {{volume}}
+  <button v-on:click="submit">确定✅</button>
+</section>
+<hr/>
+
+<script src="./lib/calc.js"></script>
+<script src="./lib/vue.min.js"></script>
+<script src="main.js"></script>
